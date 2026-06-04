@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>La Tortería Express | Tortas y Postres en Aguachica</title>
+  <meta name="description" content="Las mejores tortas artesanales, porciones, postres y bebidas en Aguachica Cesar. Diseñamos tus tortas personalizadas para momentos inolvidables.">
+  <meta name="keywords" content="torteria express, pasteleria aguachica, tortas aguachica, tres leches, postres, bebidas, reposteria cesar">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/img/logo.jpg">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Google Fonts: Outfit (cuerpo) y Playfair Display (títulos elegantes) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+      <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
+        <div class="top-bar-item d-none d-lg-flex fs-8">
+          <i class="bi bi-clock-fill me-2 text-accent"></i>
+          <span>Horario de atención: Lunes a Domingo: 8:00 AM - 10:00 PM</span>
+        </div>
+        <div class="top-bar-item d-flex gap-3 fs-8">
+          <i class="bi bi-telephone-fill text-accent"></i>
+          <span>Pedido express: </span>
+          <a href="tel:+573103103160" class="fw-bold">+57 (310) 310-3160</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+            <img src="assets/img/logo.jpg" alt="Logo" style="height: 65px; border-radius: 8px;" class="me-2 shadow-sm">
+            <span class="sitename font-heading text-accent fw-bold fs-3">La Tortería <span class="text-dark fs-4">Express</span></span>
+          </a>
+
+          <!-- Search (Desktop) -->
+          <form class="search-form desktop-search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar tortas, postres, malteadas...">
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+            <!-- Mobile Search Toggle -->
+            <button class="header-action-btn mobile-search-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Login Link -->
+            <a href="account.html" class="header-action-btn" title="Mi Cuenta">
+              <i class="bi bi-person fs-4"></i>
+            </a>
+
+            <!-- Cart Link -->
+            <a href="cart.html" class="header-action-btn position-relative">
+              <i class="bi bi-cart3 fs-4"></i>
+              <span class="badge position-absolute top-0 start-100 translate-middle bg-accent rounded-circle" style="display: none; padding: 0.25em 0.6em; font-size: 0.7rem;">0</span>
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="header-nav py-1">
+      <div class="container-fluid container-xl">
+        <nav id="navmenu" class="navmenu">
+          <ul class="d-flex list-unstyled m-0">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="catalog.html">Nuestro Menú</a></li>
+            <li><a href="catalog.html?category=tortas">Tortas Artesanales</a></li>
+            <li><a href="catalog.html?category=hojaldres">Hojaldres y Salados</a></li>
+            <li><a href="catalog.html?category=postres">Postres y Galletas</a></li>
+            <li><a href="catalog.html?category=bebidas">Bebidas</a></li>
+            <li><a href="about.html">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="account.html">Mi Cuenta</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container py-2">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar productos...">
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section (Slide Estático / Dinámico) -->
+    <section id="hero" class="hero section position-relative py-5 overflow-hidden" style="background-image: url('assets/img/hero_banner.jpg'); background-size: cover; background-position: center; min-height: 480px;">
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(43, 31, 29, 0.65);"></div>
+      <div class="container position-relative z-1 h-100 d-flex align-items-center py-5 text-white">
+        <div class="row align-items-center">
+          <div class="col-lg-7" data-aos="fade-up">
+            <span class="badge bg-accent px-3 py-2 rounded-pill fs-7 text-uppercase tracking-wider mb-3">Sabor de Felicidad</span>
+            <h1 class="display-3 font-heading fw-bold mb-3 text-white">Repostería Premium <br>Hecha con Amor</h1>
+            <p class="fs-5 opacity-90 mb-4 lh-base">Disfruta de las más deliciosas tortas de tres quesos especial, tortas de ahuyama tradicionales, genovesas húmedas de arequipe y tortas de chocolate en Aguachica. Encarga tus tortas enteras o disfruta de nuestras porciones.</p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="catalog.html" class="btn btn-accent btn-lg rounded-pill px-5 py-3 shadow font-heading">Ver el Menú Completo</a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 font-heading"><i class="bi bi-geo-alt me-2"></i>Dónde estamos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="font-heading fw-bold text-dark mb-2">Explora Nuestras Delicias</h2>
+          <p class="text-muted">Elige tu categoría favorita y descubre sabores únicos elaborados a mano.</p>
+        </div>
+        
+        <div class="row g-4 text-center justify-content-center">
+          <!-- Categoría Tortas -->
+          <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+            <a href="catalog.html?category=tortas" class="text-decoration-none group-hover">
+              <div class="card border-0 p-4 rounded-4 shadow-sm h-100 card-category transition">
+                <div class="category-icon-wrapper mx-auto mb-4 bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 90px; height: 90px;">
+                  <img src="assets/img/product/torta_3quesos.jpg" class="object-fit-cover w-75 h-75 rounded-circle" alt="Tortas">
+                </div>
+                <h5 class="fw-semibold text-dark mb-1">Tortas Artesanales</h5>
+                <span class="text-muted fs-8">Tres quesos, ahuyama, chocolate...</span>
+              </div>
+            </a>
+          </div>
+          <!-- Categoría Hojaldres -->
+          <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+            <a href="catalog.html?category=hojaldres" class="text-decoration-none group-hover">
+              <div class="card border-0 p-4 rounded-4 shadow-sm h-100 card-category transition">
+                <div class="category-icon-wrapper mx-auto mb-4 bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 90px; height: 90px;">
+                  <img src="assets/img/product/pasteles_hojaldrados.jpg" class="object-fit-cover w-75 h-75 rounded-circle" alt="Hojaldres">
+                </div>
+                <h5 class="fw-semibold text-dark mb-1">Hojaldres y Salados</h5>
+                <span class="text-muted fs-8">Croissant, deditos y pasteles</span>
+              </div>
+            </a>
+          </div>
+          <!-- Categoría Postres -->
+          <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="catalog.html?category=postres" class="text-decoration-none group-hover">
+              <div class="card border-0 p-4 rounded-4 shadow-sm h-100 card-category transition">
+                <div class="category-icon-wrapper mx-auto mb-4 bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 90px; height: 90px;">
+                  <img src="assets/img/product/torta_chocolate.jpg" class="object-fit-cover w-75 h-75 rounded-circle" alt="Postres">
+                </div>
+                <h5 class="fw-semibold text-dark mb-1">Postres y Galletas</h5>
+                <span class="text-muted fs-8">Quesillo, galletas, ponquesitos</span>
+              </div>
+            </a>
+          </div>
+          <!-- Categoría Bebidas -->
+          <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+            <a href="catalog.html?category=bebidas" class="text-decoration-none group-hover">
+              <div class="card border-0 p-4 rounded-4 shadow-sm h-100 card-category transition">
+                <div class="category-icon-wrapper mx-auto mb-4 bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 90px; height: 90px;">
+                  <img src="assets/img/product/frappe.jpg" class="object-fit-cover w-75 h-75 rounded-circle" alt="Bebidas">
+                </div>
+                <h5 class="fw-semibold text-dark mb-1">Bebidas</h5>
+                <span class="text-muted fs-8">Capuccino, frappés y avena cubana</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-5 light-background">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="text-accent fw-bold text-uppercase fs-8 tracking-wider">Los Favoritos</span>
+          <h2 class="font-heading fw-bold text-dark mt-1 mb-2">Consentidos de la Semana</h2>
+          <p class="text-muted">Las delicias que más piden los hogares de Aguachica Cesar.</p>
+        </div>
+
+        <!-- Renderizado dinámico desde HomeController / HomeView -->
+        <div class="row g-4" id="featured-products-container">
+          <div class="col-12 text-center py-5">
+            <div class="spinner-border text-accent" role="status">
+              <span class="visually-hidden">Cargando delicias...</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="catalog.html" class="btn btn-outline-accent rounded-pill px-5 py-3 font-heading">Ver Todo el Menú</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotion Coupon Banner Section -->
+    <section class="py-5 bg-accent text-white position-relative overflow-hidden">
+      <div class="container py-4 text-center position-relative z-1">
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="zoom-in">
+            <i class="bi bi-gift-fill fs-1 mb-3 text-warning"></i>
+            <h2 class="font-heading fw-bold mb-2">¿Primera vez pidiendo en nuestra web?</h2>
+            <p class="fs-5 opacity-90 mb-4">Aplica el cupón promocional <strong class="bg-white text-accent px-3 py-1 rounded-3 mx-1 font-heading">BIENVENIDO20</strong> en el carrito de compras y obtén un *20% de descuento* en tu primer pedido.</p>
+            <a href="catalog.html" class="btn btn-light text-accent btn-lg rounded-pill px-5 py-3 font-heading shadow fw-semibold">Ordenar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="text-accent fw-bold text-uppercase fs-8 tracking-wider">Testimonios</span>
+          <h2 class="font-heading fw-bold text-dark mt-1 mb-2">Clientes Felices en Aguachica</h2>
+          <p class="text-muted">Esto es lo que dicen nuestros amigos y vecinos sobre nuestros postres.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Testimonio 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-light">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-muted italic fs-7 mb-4">"La torta de tres leches tradicional de aquí es increíblemente deliciosa. Super esponjosa y mojada al punto exacto. Siempre las encargamos para los cumpleaños familiares. ¡La mejor de Aguachica!"</p>
+              <div class="d-flex align-items-center">
+                <div class="bg-accent rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width: 45px; height: 45px;">MF</div>
+                <div class="ms-3">
+                  <h6 class="mb-0 fw-semibold text-dark">María Fernanda R.</h6>
+                  <small class="text-muted fs-8">Cliente Frecuente</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonio 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-light">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-muted italic fs-7 mb-4">"La malteada express que viene coronada con un brownie entero es otro nivel. Muy cremoso el helado y el brownie súper húmedo. La atención es fantástica, el pedido llega súper rápido."</p>
+              <div class="d-flex align-items-center">
+                <div class="bg-accent rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width: 45px; height: 45px;">JC</div>
+                <div class="ms-3">
+                  <h6 class="mb-0 fw-semibold text-dark">Juan Carlos G.</h6>
+                  <small class="text-muted fs-8">Cliente Express</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonio 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-light">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              </div>
+              <p class="text-muted italic fs-7 mb-4">"La torta de ahuyama de La Tortería es súper suave y melosa, sabe exactamente a los dulces tradicionales que me preparaba mi abuela. Y la atención al cliente es inmejorable."</p>
+              <div class="d-flex align-items-center">
+                <div class="bg-accent rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width: 45px; height: 45px;">PM</div>
+                <div class="ms-3">
+                  <h6 class="mb-0 fw-semibold text-dark">Patricia M.</h6>
+                  <small class="text-muted fs-8">Vecina de Aguachica</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background py-5 mt-5">
+    <div class="container footer-top">
+      <div class="row gy-4 justify-content-between">
+        
+        <!-- About Widget -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget footer-about">
+            <a href="index.html" class="logo d-flex align-items-center text-decoration-none mb-3">
+              <span class="sitename font-heading text-accent fw-bold fs-4">La Tortería <span class="text-white fs-5">Express</span></span>
+            </a>
+            <p class="fs-7 opacity-75">Las mejores tortas y postres de Aguachica. Preparamos tortas personalizadas para bodas, cumpleaños y eventos especiales con ingredientes seleccionados de primera calidad.</p>
+            <div class="social-links mt-4">
+              <h6 class="text-white mb-3">Síguenos en Redes Sociales</h6>
+              <div class="social-icons d-flex gap-2">
+                <a href="https://www.facebook.com/share/1CvZ9FSz8J/" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/latorteria_express?igsh=bjNzZ3I1cWI3ZGJh" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links Widget -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="text-white mb-3 font-heading">Categorías</h5>
+            <ul class="list-unstyled footer-links fs-7">
+              <li class="mb-2"><a href="catalog.html?category=tortas" class="text-white-50 text-decoration-none hover-white">Tortas Artesanales</a></li>
+              <li class="mb-2"><a href="catalog.html?category=hojaldres" class="text-white-50 text-decoration-none hover-white">Hojaldres y Salados</a></li>
+              <li class="mb-2"><a href="catalog.html?category=postres" class="text-white-50 text-decoration-none hover-white">Postres y Galletas</a></li>
+              <li class="mb-2"><a href="catalog.html?category=bebidas" class="text-white-50 text-decoration-none hover-white">Bebidas</a></li>
+            </ul>
+          </div>
+        </div>
+
+                <!-- Legal Widget -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="text-white mb-3 font-heading">Enlaces Útiles</h5>
+            <ul class="list-unstyled footer-links fs-7">
+              <li class="mb-2"><a href="faq.html" class="text-white-50 text-decoration-none hover-white">Preguntas Frecuentes</a></li>
+              <li class="mb-2"><a href="shiping-info.html" class="text-white-50 text-decoration-none hover-white">Políticas de Envío</a></li>
+              <li class="mb-2"><a href="return-policy.html" class="text-white-50 text-decoration-none hover-white">Políticas de Devolución</a></li>
+              <li class="mb-2"><a href="payment-methods.html" class="text-white-50 text-decoration-none hover-white">Métodos de Pago</a></li>
+              <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none hover-white">Aviso de Privacidad</a></li>
+              <li class="mb-2"><a href="tos.html" class="text-white-50 text-decoration-none hover-white">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Widget -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget text-start">
+            <h5 class="text-white mb-3 font-heading">Ubicación y Horarios</h5>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Calle 6 #18-12, Aguachica, Cesar, Colombia</p>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-clock-fill text-accent me-2"></i> Lunes a Domingo: 8:00 AM - 10:00 PM</p>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-envelope-fill text-accent me-2"></i> info@latorteriaexpress.com</p>
+            <p class="fs-7 opacity-75"><i class="bi bi-telephone-fill text-accent me-2"></i> +57 (310) 310-3160</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container text-center border-top border-secondary pt-4 mt-5 fs-8 opacity-50">
+      <p class="m-0">&copy; 2026 La Tortería Express. Todos los derechos reservados.</p>
+      <p class="m-0">Desarrollado para la materia de Programación Web - Arquitectura MVC Frontend.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center rounded-circle bg-accent text-white"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- MVC Core Scripts (Cargados en orden sin CORS) -->
+  <script src="app/services/api.js?v=2"></script>
+  <script src="app/models/ProductModel.js?v=2"></script>
+  <script src="app/models/CartModel.js?v=2"></script>
+  <script src="app/models/OrderModel.js?v=2"></script>
+  <script src="app/views/CommonView.js?v=2"></script>
+  <script src="app/views/HomeView.js?v=2"></script>
+  <script src="app/controllers/HomeController.js?v=2"></script>
+
+  <!-- Initializer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Iniciar animaciones de Scroll (AOS)
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 600,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      }
+      
+      // Inicializar el controlador del Home
+      window.TorteriaApp.Controllers.HomeController.init();
+    });
+  </script>
+</body>
+</html>

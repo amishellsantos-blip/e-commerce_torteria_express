@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Finalizar Compra | La Tortería Express - Repostería en Aguachica</title>
+  <meta name="description" content="Completa los datos de entrega para tu domicilio en Aguachica o escoge recoger en tienda. Paga por Nequi o contra entrega.">
+  
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/logo.jpg" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo.jpg">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="checkout-page">
+
+  <header id="header" class="header sticky-top">
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+      <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
+        <div class="top-bar-item d-none d-lg-flex fs-8">
+          <i class="bi bi-clock-fill me-2 text-accent"></i>
+          <span>Horario de atención: Lunes a Domingo: 8:00 AM - 10:00 PM</span>
+        </div>
+        <div class="top-bar-item d-flex gap-3 fs-8">
+          <i class="bi bi-telephone-fill text-accent"></i>
+          <span>Pedido express: </span>
+          <a href="tel:+573103103160" class="fw-bold">+57 (310) 310-3160</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+            <img src="assets/img/logo.jpg" alt="Logo" style="height: 65px; border-radius: 8px;" class="me-2 shadow-sm">
+            <span class="sitename font-heading text-accent fw-bold fs-3">La Tortería <span class="text-dark fs-4">Express</span></span>
+          </a>
+
+          <!-- Search (Desktop) -->
+          <form class="search-form desktop-search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar tortas, postres, malteadas...">
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+            <!-- Mobile Search Toggle -->
+            <button class="header-action-btn mobile-search-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Cart Link -->
+            <a href="cart.html" class="header-action-btn position-relative">
+              <i class="bi bi-cart3 fs-4"></i>
+              <span class="badge position-absolute top-0 start-100 translate-middle bg-accent rounded-circle" style="display: none; padding: 0.25em 0.6em; font-size: 0.7rem;">0</span>
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="header-nav py-1">
+      <div class="container-fluid container-xl">
+        <nav id="navmenu" class="navmenu">
+          <ul class="d-flex list-unstyled m-0">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalog.html">Nuestro Menú</a></li>
+            <li><a href="catalog.html?category=tortas">Tortas Artesanales</a></li>
+            <li><a href="catalog.html?category=hojaldres">Hojaldres y Salados</a></li>
+            <li><a href="catalog.html?category=postres">Postres y Galletas</a></li>
+            <li><a href="catalog.html?category=bebidas">Bebidas</a></li>
+            <li><a href="about.html">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="account.html">Mi Cuenta</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container py-2">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar productos...">
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title / Breadcrumbs -->
+    <div class="page-title py-4" style="background-color: #fcf1eb;">
+      <div class="container">
+        <nav class="breadcrumbs fs-8 mb-2">
+          <ol class="breadcrumb m-0 list-unstyled d-flex gap-2">
+            <li><a href="index.html" class="text-muted text-decoration-none">Inicio</a></li>
+            <li class="text-muted">/</li>
+            <li><a href="cart.html" class="text-muted text-decoration-none">Mi Carrito</a></li>
+            <li class="text-muted">/</li>
+            <li class="fw-semibold text-dark">Finalizar Compra</li>
+          </ol>
+        </nav>
+        <h1 class="font-heading fw-bold text-dark m-0 fs-2">Datos de Entrega y Facturación</h1>
+      </div>
+    </div>
+
+    <!-- Checkout Main Section -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        
+        <!-- Main dynamic container (replaced with success view after checkout) -->
+        <div id="checkout-main-container">
+          <form id="checkout-form" class="needs-validation" novalidate>
+            <div class="row g-5">
+              
+              <!-- Form inputs (Left Side) -->
+              <div class="col-lg-7" data-aos="fade-right">
+                <div class="card border-0 shadow-sm rounded-4 p-4 bg-light">
+                  <h4 class="fw-bold mb-4 text-dark font-heading">Información del Cliente</h4>
+                  
+                  <!-- Customer Name -->
+                  <div class="mb-3">
+                    <label for="customer-name" class="form-label fw-semibold text-dark fs-7">Nombre Completo:</label>
+                    <input type="text" class="form-control rounded-3 py-2 bg-white" id="customer-name" placeholder="Ej: María Camila Pérez" required>
+                    <div class="invalid-feedback text-danger fs-8" id="error-customer-name"></div>
+                  </div>
+
+                  <!-- Customer Phone -->
+                  <div class="mb-4">
+                    <label for="customer-phone" class="form-label fw-semibold text-dark fs-7">Teléfono Celular (Para coordinación y WhatsApp):</label>
+                    <input type="tel" class="form-control rounded-3 py-2 bg-white" id="customer-phone" placeholder="Ej: 3103103160" required>
+                    <div class="form-text fs-9">Ingresa un número celular de Colombia de 10 dígitos (ej: 3123456789) para enviarte la confirmación.</div>
+                    <div class="invalid-feedback text-danger fs-8" id="error-customer-phone"></div>
+                  </div>
+
+                  <hr class="my-4 border-light-subtle">
+
+                  <!-- Delivery Method Selection -->
+                  <h5 class="fw-bold mb-3 text-dark font-heading">Método de Entrega</h5>
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                      <div class="form-check card-radio p-3 border rounded-3 bg-white">
+                        <input class="form-check-input text-accent" type="radio" name="deliveryMethod" id="method-delivery" value="domicilio" checked>
+                        <label class="form-check-label w-100 cursor-pointer" for="method-delivery">
+                          <span class="d-block fw-bold text-dark fs-6 mb-1"><i class="bi bi-bicycle me-2 text-accent"></i>Domicilio</span>
+                          <span class="fs-8 text-muted">Entrega en la puerta de tu casa por sólo $3.000 COP</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check card-radio p-3 border rounded-3 bg-white">
+                        <input class="form-check-input text-accent" type="radio" name="deliveryMethod" id="method-pickup" value="tienda">
+                        <label class="form-check-label w-100 cursor-pointer" for="method-pickup">
+                          <span class="d-block fw-bold text-dark fs-6 mb-1"><i class="bi bi-shop me-2 text-accent"></i>Recoger en Tienda</span>
+                          <span class="fs-8 text-muted">Sin costo adicional en nuestra sede (Calle 6 #18-12)</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Address inputs (Hidden/Shown dynamically) -->
+                  <div id="checkout-address-fields">
+                    <h5 class="fw-bold mb-3 text-dark font-heading">Dirección de Envío (Sólo Aguachica)</h5>
+                    <div class="row g-3 mb-4">
+                      <div class="col-md-7">
+                        <label for="customer-address" class="form-label fw-semibold text-dark fs-7">Dirección Completa:</label>
+                        <input type="text" class="form-control rounded-3 py-2 bg-white" id="customer-address" placeholder="Ej: Calle 5 # 14-45" required>
+                        <div class="invalid-feedback text-danger fs-8" id="error-customer-address"></div>
+                      </div>
+                      <div class="col-md-5">
+                        <label for="customer-neighborhood" class="form-label fw-semibold text-dark fs-7">Barrio en Aguachica:</label>
+                        <input type="text" class="form-control rounded-3 py-2 bg-white" id="customer-neighborhood" placeholder="Ej: San Roque" required>
+                        <div class="invalid-feedback text-danger fs-8" id="error-customer-neighborhood"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4 border-light-subtle">
+
+                  <!-- Payment Method Selection -->
+                  <h5 class="fw-bold mb-3 text-dark font-heading">Método de Pago</h5>
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                      <div class="form-check card-radio p-3 border rounded-3 bg-white">
+                        <input class="form-check-input text-accent" type="radio" name="paymentMethod" id="pay-nequi" value="nequi" checked>
+                        <label class="form-check-label w-100 cursor-pointer" for="pay-nequi">
+                          <span class="d-block fw-bold text-dark fs-6 mb-1"><i class="bi bi-wallet2 me-2 text-accent"></i>Nequi / Bancolombia</span>
+                          <span class="fs-8 text-muted">Pago por transferencia. Te pasaremos el número de cuenta.</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check card-radio p-3 border rounded-3 bg-white">
+                        <input class="form-check-input text-accent" type="radio" name="paymentMethod" id="pay-cash" value="contraentrega">
+                        <label class="form-check-label w-100 cursor-pointer" for="pay-cash">
+                          <span class="d-block fw-bold text-dark fs-6 mb-1"><i class="bi bi-cash me-2 text-accent"></i>Pago Contra Entrega</span>
+                          <span class="fs-8 text-muted">Cancela en efectivo al recibir tu pedido en tu puerta.</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="invalid-feedback text-danger fs-8" id="error-payment-method"></div>
+                  </div>
+
+                  <!-- Extra order notes -->
+                  <div class="mb-2">
+                    <label for="order-notes" class="form-label fw-semibold text-dark fs-7">Notas Adicionales / Instrucciones (Opcional):</label>
+                    <textarea class="form-control rounded-3 py-2 bg-white" id="order-notes" rows="3" placeholder="Ej: Traer cambio de 50.000, timbrar fuerte, etc."></textarea>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Order Summary & Submit (Right Side) -->
+              <div class="col-lg-5" data-aos="fade-left">
+                <div class="card border-0 shadow-sm rounded-4 p-4 bg-light">
+                  <h4 class="fw-bold mb-4 text-dark font-heading">Resumen del Pedido</h4>
+                  
+                  <!-- Product summary list -->
+                  <div class="summary-items border-bottom pb-3 mb-4" id="checkout-summary-list">
+                    <!-- Injected dynamically -->
+                  </div>
+
+                  <!-- Pricing Calculations -->
+                  <div id="checkout-pricing-summary">
+                    <!-- Injected dynamically -->
+                  </div>
+
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow btn-hover" id="checkout-btn-place-order">
+                    <i class="bi bi-bag-check-fill me-2 fs-5"></i>Realizar Pedido
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background py-5 mt-5">
+    <div class="container footer-top">
+      <div class="row gy-4 justify-content-between">
+        
+        <!-- About Widget -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget footer-about">
+            <a href="index.html" class="logo d-flex align-items-center text-decoration-none mb-3">
+              <span class="sitename font-heading text-accent fw-bold fs-4">La Tortería <span class="text-white fs-5">Express</span></span>
+            </a>
+            <p class="fs-7 opacity-75">Las mejores tortas y postres de Aguachica. Preparamos tortas personalizadas para bodas, cumpleaños y eventos especiales con ingredientes seleccionados de primera calidad.</p>
+            <div class="social-links mt-4">
+              <h6 class="text-white mb-3">Síguenos en Redes Sociales</h6>
+              <div class="social-icons d-flex gap-2">
+                <a href="https://www.facebook.com/share/1CvZ9FSz8J/" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/latorteria_express?igsh=bjNzZ3I1cWI3ZGJh" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links Widget -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="text-white mb-3 font-heading">Categorías</h5>
+            <ul class="list-unstyled footer-links fs-7">
+              <li class="mb-2"><a href="catalog.html?category=tortas" class="text-white-50 text-decoration-none hover-white">Tortas Artesanales</a></li>
+              <li class="mb-2"><a href="catalog.html?category=hojaldres" class="text-white-50 text-decoration-none hover-white">Hojaldres y Salados</a></li>
+              <li class="mb-2"><a href="catalog.html?category=postres" class="text-white-50 text-decoration-none hover-white">Postres y Galletas</a></li>
+              <li class="mb-2"><a href="catalog.html?category=bebidas" class="text-white-50 text-decoration-none hover-white">Bebidas</a></li>
+            </ul>
+          </div>
+        </div>
+
+                <!-- Legal Widget -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="text-white mb-3 font-heading">Enlaces Útiles</h5>
+            <ul class="list-unstyled footer-links fs-7">
+              <li class="mb-2"><a href="faq.html" class="text-white-50 text-decoration-none hover-white">Preguntas Frecuentes</a></li>
+              <li class="mb-2"><a href="shiping-info.html" class="text-white-50 text-decoration-none hover-white">Políticas de Envío</a></li>
+              <li class="mb-2"><a href="return-policy.html" class="text-white-50 text-decoration-none hover-white">Políticas de Devolución</a></li>
+              <li class="mb-2"><a href="payment-methods.html" class="text-white-50 text-decoration-none hover-white">Métodos de Pago</a></li>
+              <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none hover-white">Aviso de Privacidad</a></li>
+              <li class="mb-2"><a href="tos.html" class="text-white-50 text-decoration-none hover-white">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Widget -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget text-start">
+            <h5 class="text-white mb-3 font-heading">Ubicación y Horarios</h5>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Calle 6 #18-12, Aguachica, Cesar, Colombia</p>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-clock-fill text-accent me-2"></i> Lunes a Domingo: 8:00 AM - 10:00 PM</p>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-envelope-fill text-accent me-2"></i> info@latorteriaexpress.com</p>
+            <p class="fs-7 opacity-75"><i class="bi bi-telephone-fill text-accent me-2"></i> +57 (310) 310-3160</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container text-center border-top border-secondary pt-4 mt-5 fs-8 opacity-50">
+      <p class="m-0">&copy; 2026 La Tortería Express. Todos los derechos reservados.</p>
+      <p class="m-0">Desarrollado para la materia de Programación Web - Arquitectura MVC Frontend.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center rounded-circle bg-accent text-white"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- MVC Core Scripts (Cargados en orden sin CORS) -->
+  <script src="app/services/api.js"></script>
+  <script src="app/models/ProductModel.js"></script>
+  <script src="app/models/CartModel.js"></script>
+  <script src="app/models/OrderModel.js"></script>
+  <script src="app/views/CommonView.js"></script>
+  <script src="app/views/CheckoutView.js"></script>
+  <script src="app/controllers/CheckoutController.js"></script>
+
+  <!-- Initializer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 600,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      }
+      
+      // Inicializar el controlador del checkout
+      window.TorteriaApp.Controllers.CheckoutController.init();
+    });
+  </script>
+</body>
+</html>

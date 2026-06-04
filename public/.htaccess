@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Si el archivo o directorio solicitado existe físicamente en /public, sírvelo directamente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Si no existe, redirige todo el tráfico a index.php (Front Controller)
+RewriteRule ^(.*)$ index.php [QSA,L]

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mi Carrito | La Tortería Express - Repostería en Aguachica</title>
+  <meta name="description" content="Revisa tu pedido de tortas y postres antes de finalizar la compra.">
+  
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/logo.jpg" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo.jpg">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="cart-page">
+
+  <header id="header" class="header sticky-top">
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+      <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
+        <div class="top-bar-item d-none d-lg-flex fs-8">
+          <i class="bi bi-clock-fill me-2 text-accent"></i>
+          <span>Horario de atención: Lunes a Domingo: 8:00 AM - 10:00 PM</span>
+        </div>
+        <div class="top-bar-item d-flex gap-3 fs-8">
+          <i class="bi bi-telephone-fill text-accent"></i>
+          <span>Pedido express: </span>
+          <a href="tel:+573103103160" class="fw-bold">+57 (310) 310-3160</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+            <img src="assets/img/logo.jpg" alt="Logo" style="height: 65px; border-radius: 8px;" class="me-2 shadow-sm">
+            <span class="sitename font-heading text-accent fw-bold fs-3">La Tortería <span class="text-dark fs-4">Express</span></span>
+          </a>
+
+          <!-- Search (Desktop) -->
+          <form class="search-form desktop-search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar tortas, postres, malteadas...">
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+            <!-- Mobile Search Toggle -->
+            <button class="header-action-btn mobile-search-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Cart Link -->
+            <a href="cart.html" class="header-action-btn position-relative">
+              <i class="bi bi-cart3 fs-4 text-accent"></i>
+              <span class="badge position-absolute top-0 start-100 translate-middle bg-accent rounded-circle" style="display: none; padding: 0.25em 0.6em; font-size: 0.7rem;">0</span>
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="header-nav py-1">
+      <div class="container-fluid container-xl">
+        <nav id="navmenu" class="navmenu">
+          <ul class="d-flex list-unstyled m-0">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalog.html">Nuestro Menú</a></li>
+            <li><a href="catalog.html?category=tortas">Tortas Artesanales</a></li>
+            <li><a href="catalog.html?category=hojaldres">Hojaldres y Salados</a></li>
+            <li><a href="catalog.html?category=postres">Postres y Galletas</a></li>
+            <li><a href="catalog.html?category=bebidas">Bebidas</a></li>
+            <li><a href="about.html">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="account.html">Mi Cuenta</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container py-2">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar productos...">
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title / Breadcrumbs -->
+    <div class="page-title py-4" style="background-color: #fcf1eb;">
+      <div class="container">
+        <nav class="breadcrumbs fs-8 mb-2">
+          <ol class="breadcrumb m-0 list-unstyled d-flex gap-2">
+            <li><a href="index.html" class="text-muted text-decoration-none">Inicio</a></li>
+            <li class="text-muted">/</li>
+            <li class="fw-semibold text-dark">Mi Carrito</li>
+          </ol>
+        </nav>
+        <h1 class="font-heading fw-bold text-dark m-0 fs-2">Tu Carrito de Compras</h1>
+      </div>
+    </div>
+
+    <!-- Cart Main Section -->
+    <section class="py-5 bg-white">
+      <div class="container" id="cart-main-container">
+        <div class="row g-5">
+          <!-- Cart Table (Left Side) -->
+          <div class="col-lg-8" data-aos="fade-right">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle border-bottom">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col" class="py-3 text-uppercase fs-8 text-muted fw-semibold">Producto</th>
+                    <th scope="col" class="py-3 text-uppercase fs-8 text-muted fw-semibold text-center">Precio</th>
+                    <th scope="col" class="py-3 text-uppercase fs-8 text-muted fw-semibold text-center">Cantidad</th>
+                    <th scope="col" class="py-3 text-uppercase fs-8 text-muted fw-semibold text-end">Total</th>
+                    <th scope="col" class="py-3"></th>
+                  </tr>
+                </thead>
+                <tbody id="cart-table-body">
+                  <!-- Los items del carrito se cargarán dinámicamente aquí -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Botones de Acción Extra y Cupones -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
+              <a href="catalog.html" class="btn btn-outline-dark rounded-pill px-4 py-2 mb-3 mb-md-0">
+                <i class="bi bi-arrow-left me-2"></i>Seguir Comprando
+              </a>
+              <div class="coupon-box" style="max-width: 350px;">
+                <div class="input-group">
+                  <input type="text" class="form-control rounded-start-pill border-end-0 px-4" id="cart-coupon-input" placeholder="Código de descuento">
+                  <button class="btn btn-outline-accent rounded-end-pill px-4" type="button" id="cart-coupon-btn">Aplicar</button>
+                </div>
+                <div id="cart-coupon-message"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart Summary (Right Side) -->
+          <div class="col-lg-4" data-aos="fade-left">
+            <div class="card border-0 shadow-sm rounded-4 p-4 bg-light">
+              <div id="cart-summary-container">
+                <!-- El resumen de totales se cargará dinámicamente aquí -->
+              </div>
+              <a href="checkout.html" class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow mt-4">
+                Proceder al Pago <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background py-5 mt-5">
+    <div class="container footer-top">
+      <div class="row gy-4 justify-content-between">
+        
+        <!-- About Widget -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget footer-about">
+            <a href="index.html" class="logo d-flex align-items-center text-decoration-none mb-3">
+              <span class="sitename font-heading text-accent fw-bold fs-4">La Tortería <span class="text-white fs-5">Express</span></span>
+            </a>
+            <p class="fs-7 opacity-75">Las mejores tortas y postres de Aguachica. Preparamos tortas personalizadas para bodas, cumpleaños y eventos especiales con ingredientes seleccionados de primera calidad.</p>
+            <div class="social-links mt-4">
+              <h6 class="text-white mb-3">Síguenos en Redes Sociales</h6>
+              <div class="social-icons d-flex gap-2">
+                <a href="https://www.facebook.com/share/1CvZ9FSz8J/" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/latorteria_express?igsh=bjNzZ3I1cWI3ZGJh" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links Widget -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="text-white mb-3 font-heading">Categorías</h5>
+            <ul class="list-unstyled footer-links fs-7">
+              <li class="mb-2"><a href="catalog.html?category=tortas" class="text-white-50 text-decoration-none hover-white">Tortas Artesanales</a></li>
+              <li class="mb-2"><a href="catalog.html?category=hojaldres" class="text-white-50 text-decoration-none hover-white">Hojaldres y Salados</a></li>
+              <li class="mb-2"><a href="catalog.html?category=postres" class="text-white-50 text-decoration-none hover-white">Postres y Galletas</a></li>
+              <li class="mb-2"><a href="catalog.html?category=bebidas" class="text-white-50 text-decoration-none hover-white">Bebidas</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Legal Widget -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="text-white mb-3 font-heading">Enlaces Útiles</h5>
+            <ul class="list-unstyled footer-links fs-7">
+              <li class="mb-2"><a href="faq.html" class="text-white-50 text-decoration-none hover-white">Preguntas Frecuentes</a></li>
+              <li class="mb-2"><a href="shiping-info.html" class="text-white-50 text-decoration-none hover-white">Políticas de Envío</a></li>
+              <li class="mb-2"><a href="return-policy.html" class="text-white-50 text-decoration-none hover-white">Políticas de Devolución</a></li>
+              <li class="mb-2"><a href="payment-methods.html" class="text-white-50 text-decoration-none hover-white">Métodos de Pago</a></li>
+              <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none hover-white">Aviso de Privacidad</a></li>
+              <li class="mb-2"><a href="tos.html" class="text-white-50 text-decoration-none hover-white">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Widget -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-widget text-start">
+            <h5 class="text-white mb-3 font-heading">Ubicación y Horarios</h5>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-geo-alt-fill text-accent me-2"></i> Calle 6 #18-12, Aguachica, Cesar, Colombia</p>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-clock-fill text-accent me-2"></i> Lunes a Domingo: 8:00 AM - 10:00 PM</p>
+            <p class="fs-7 opacity-75 mb-2"><i class="bi bi-envelope-fill text-accent me-2"></i> info@latorteriaexpress.com</p>
+            <p class="fs-7 opacity-75"><i class="bi bi-telephone-fill text-accent me-2"></i> +57 (310) 310-3160</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container text-center border-top border-secondary pt-4 mt-5 fs-8 opacity-50">
+      <p class="m-0">&copy; 2026 La Tortería Express. Todos los derechos reservados.</p>
+      <p class="m-0">Desarrollado para la materia de Programación Web - Arquitectura MVC Frontend.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center rounded-circle bg-accent text-white"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- MVC Core Scripts (Cargados en orden sin CORS) -->
+  <script src="app/services/api.js"></script>
+  <script src="app/models/ProductModel.js"></script>
+  <script src="app/models/CartModel.js"></script>
+  <script src="app/models/OrderModel.js"></script>
+  <script src="app/views/CommonView.js"></script>
+  <script src="app/views/CartView.js"></script>
+  <script src="app/controllers/CartController.js"></script>
+
+  <!-- Initializer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 600,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      }
+      
+      // Inicializar el controlador del carrito
+      window.TorteriaApp.Controllers.CartController.init();
+    });
+  </script>
+</body>
+</html>
