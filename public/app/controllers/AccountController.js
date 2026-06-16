@@ -139,12 +139,11 @@ window.TorteriaApp.Controllers.AccountController = (function() {
     e.preventDefault();
     try {
       await window.TorteriaApp.Services.api.logout();
-      window.TorteriaApp.Models.CartModel.clearCart(); // Limpiar el carrito local por seguridad
-      window.location.href = "login.html";
-    } catch (error) {
-      console.error(error);
-      alert("Error al intentar cerrar sesión.");
+    } catch (err) {
+      console.error("Error during logout:", err);
     }
+    localStorage.removeItem('user');
+    window.location.href = 'login.html';
   }
 
   return {

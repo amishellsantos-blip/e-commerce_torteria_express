@@ -405,11 +405,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Logout
-  btnLogout.addEventListener('click', () => {
-    localStorage.removeItem('user');
-    window.location.href = 'index.html';
-  });
+    // Logout
+    btnLogout.addEventListener('click', async () => {
+      try {
+        await window.TorteriaApp.Services.api.logout();
+      } catch (e) {
+        console.error("Error during logout:", e);
+      }
+      localStorage.removeItem('user');
+      window.location.href = 'index.html';
+    });
 
   // Búsqueda en tiempo real
   searchInput.addEventListener('input', filterProducts);
