@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-require __DIR__ . '/../../api/db.php';
+require_once __DIR__ . '/../../config/database.php';
 
 // Iniciar sesión y validar seguridad (Solo Administradores)
 session_start();

@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Cargar el archivo que conecta con MySQL
-require __DIR__ . '/../db.php';
+require_once __DIR__ . '/../../config/database.php';
 
 // Leer el paquete de datos que envió la página web
 $data = json_decode(file_get_contents("php://input"));

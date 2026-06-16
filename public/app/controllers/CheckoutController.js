@@ -48,7 +48,7 @@ window.TorteriaApp.Controllers.CheckoutController = (function() {
         total_amount: pricing.total,
         payment_method: customerData.paymentMethod,
         shipping_address: customerData.deliveryMethod === "domicilio" ? `${customerData.address}, Barrio: ${customerData.neighborhood}` : "Recogida en local",
-        shipping_notes: customerData.notes || ""
+        shipping_notes: `Cliente: ${customerData.name} | Tel: ${customerData.phone}` + (customerData.notes ? ` | Notas: ${customerData.notes}` : "")
       };
 
       // 3. Enviar a la base de datos MySQL real mediante nuestro API

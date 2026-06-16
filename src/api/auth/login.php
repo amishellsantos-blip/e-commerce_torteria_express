@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Cargar el archivo de conexión a la base de datos
-require __DIR__ . '/../db.php';
+require_once __DIR__ . '/../../config/database.php';
 
 // Obtener los datos JSON enviados desde el formulario HTML usando JavaScript (fetch)
 $data = json_decode(file_get_contents("php://input"));

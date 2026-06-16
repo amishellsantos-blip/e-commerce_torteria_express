@@ -7,7 +7,7 @@ header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 
 // Importar la conexión a la base de datos
-require 'db.php';
+require_once __DIR__ . '/../config/database.php';
 
 try {
     // Preparar y ejecutar la consulta para traer todos los productos de la tabla principal

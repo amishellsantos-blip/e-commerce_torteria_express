@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-require __DIR__ . '/db.php';
+require_once __DIR__ . '/../config/database.php';
 
 session_start();
 
@@ -23,8 +23,18 @@ session_start();
 // }
 
 $method = $_SERVER['REQUEST_METHOD'];
-$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 1; // Fallback al usuario 1 (para pruebas locales si falla la sesión)
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 $user_role = isset($_SESSION['user_role']) ? $_SESSION['user_role'] : 'cliente';
+
+if (!$user_id) {
+    // Buscar o crear usuario invitado genérico
+    $stmtGuest = $pdo->query("SELECT id FROM users WHERE email = 'invitado@torteriaexpress.com'");
+    $user_id = $stmtGuest->fetchColumn();
+    if (!$user_id) {
+        $pdo->exec("INSERT INTO users (name, email, password_hash, phone, role) VALUES ('Invitado General', 'invitado@torteriaexpress.com', '', '0000', 'cliente')");
+        $user_id = $pdo->lastInsertId();
+    }
+}
 
 try {
     switch ($method) {

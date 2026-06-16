@@ -115,6 +115,34 @@ window.TorteriaApp.Controllers.AuthController = (function() {
     });
   };
 
+  const initPasswordToggles = () => {
+    const toggleBtns = document.querySelectorAll('.password-toggle');
+    toggleBtns.forEach(btn => {
+      // Make it visually clickable with cursor style
+      btn.style.cursor = 'pointer';
+      
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Search for the input within the same parent container
+        const container = this.parentElement;
+        const input = container.querySelector('input');
+        const icon = this.querySelector('i');
+        
+        if (input) {
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('bi-eye');
+            icon.classList.add('bi-eye-slash');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('bi-eye-slash');
+            icon.classList.add('bi-eye');
+          }
+        }
+      });
+    });
+  };
+
   return {
     init: function() {
       if (typeof window.TorteriaApp.Views.CommonView !== 'undefined') {
@@ -123,6 +151,7 @@ window.TorteriaApp.Controllers.AuthController = (function() {
       initFormSwitching();
       initLogin();
       initRegister();
+      initPasswordToggles();
     }
   };
 })();
