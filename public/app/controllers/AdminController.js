@@ -412,6 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (e) {
         console.error("Error during logout:", e);
       }
+      window.TorteriaApp.Models.CartModel.clearCart();
       localStorage.removeItem('user');
       window.location.href = 'index.html';
     });
@@ -423,4 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init
   renderAdminInfo();
   loadProducts();
+  loadOrders();
+  loadCustomers();
 });

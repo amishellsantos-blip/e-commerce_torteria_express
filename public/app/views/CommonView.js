@@ -41,13 +41,14 @@ window.TorteriaApp.Views.CommonView = (function() {
               const adminBtn = document.createElement('a');
               adminBtn.href = 'admin.html';
               adminBtn.id = 'adminPanelBtn';
-              adminBtn.className = 'btn btn-dark btn-sm me-2 fw-semibold rounded-pill shadow-sm d-none d-md-flex align-items-center';
-              adminBtn.innerHTML = '<i class="bi bi-shield-lock-fill me-1"></i> Panel Admin';
+              // Removed d-none so it always shows, even on small screens
+              adminBtn.className = 'btn btn-dark btn-sm me-2 fw-semibold rounded-pill shadow-sm d-flex align-items-center';
+              adminBtn.innerHTML = '<i class="bi bi-shield-lock-fill me-1"></i> Admin';
               
-              // Insertarlo antes del icono de usuario
-              const accountIcon = document.querySelector('a[href="account.html"]');
-              if (accountIcon && accountIcon.parentElement === headerActions) {
-                headerActions.insertBefore(adminBtn, accountIcon);
+              // Find the cart link or the account link specifically inside header-actions
+              const cartLink = headerActions.querySelector('a[href*="cart.html"], a[href*="checkout.html"]');
+              if (cartLink) {
+                headerActions.insertBefore(adminBtn, cartLink);
               } else {
                 headerActions.prepend(adminBtn);
               }

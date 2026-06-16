@@ -273,7 +273,7 @@
   <!-- MVC Core Scripts -->
   <script src="app/services/api.js"></script>
   <script src="app/models/CartModel.js"></script>
-  <script src="app/views/CommonView.js?v=8"></script>
+  <script src="app/views/CommonView.js?v=9"></script>
   
   <!-- Initializer -->
   <script>
@@ -282,7 +282,7 @@
         AOS.init({ duration: 600, easing: 'ease-in-out', once: true });
       }
       if (window.TorteriaApp && window.TorteriaApp.Views && window.TorteriaApp.Views.CommonView) {
-        window.TorteriaApp.Views.CommonView.initHeader();
+        window.TorteriaApp.Views.CommonView.init();
       }
     });
   </script>

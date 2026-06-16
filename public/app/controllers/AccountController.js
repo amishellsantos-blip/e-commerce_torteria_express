@@ -147,6 +147,7 @@ window.TorteriaApp.Controllers.AccountController = (function() {
     } catch (err) {
       console.error("Error during logout:", err);
     }
+    window.TorteriaApp.Models.CartModel.clearCart();
     localStorage.removeItem('user');
     window.location.href = 'login.html';
   }
