@@ -55,11 +55,11 @@ window.TorteriaApp.Controllers.AuthController = (function() {
     registerForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      const firstNameInput = registerForm.querySelector('input[placeholder="First name"]');
-      const lastNameInput = registerForm.querySelector('input[placeholder="Last name"]');
+      const firstNameInput = registerForm.querySelector('#regFirstName');
+      const lastNameInput = registerForm.querySelector('#regLastName');
       const emailInput = registerForm.querySelector('input[type="email"]');
-      const passInput = registerForm.querySelector('input[placeholder="Create password"]');
-      const confirmPassInput = registerForm.querySelector('input[placeholder="Confirm password"]');
+      const passInput = registerForm.querySelector('#regPassword');
+      const confirmPassInput = registerForm.querySelectorAll('input[type="password"]')[1];
       const submitBtn = registerForm.querySelector('button[type="submit"]');
 
       if (passInput.value !== confirmPassInput.value) {

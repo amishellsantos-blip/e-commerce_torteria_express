@@ -44,9 +44,10 @@ const api = {
     }
   },
 
-  getOrders: async () => {
+  getOrders: async (adminMode = false) => {
     try {
-      const response = await fetch('api/orders.php');
+      const url = adminMode ? 'api/orders.php?admin_mode=true' : 'api/orders.php';
+      const response = await fetch(url);
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || 'Error al obtener pedidos');
       return data;

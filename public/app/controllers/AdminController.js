@@ -406,14 +406,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
     // Logout
-    btnLogout.addEventListener('click', async () => {
+    btnLogout.addEventListener('click', async (e) => {
+      e.preventDefault();
       try {
         await window.TorteriaApp.Services.api.logout();
       } catch (e) {
         console.error("Error during logout:", e);
       }
-      window.TorteriaApp.Models.CartModel.clearCart();
+      if (window.TorteriaApp.Models?.CartModel) {
+        window.TorteriaApp.Models.CartModel.clearCart();
+      }
       localStorage.removeItem('user');
+      localStorage.removeItem('lte_cart_items');
+      localStorage.removeItem('lte_cart_coupon');
       window.location.href = 'index.html';
     });
 

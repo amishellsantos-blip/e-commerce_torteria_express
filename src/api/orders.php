@@ -41,7 +41,13 @@ try {
         
         // LEER PEDIDOS
         case 'GET':
-            if ($user_role === 'admin') {
+            $admin_mode = isset($_GET['admin_mode']) ? $_GET['admin_mode'] === 'true' : false;
+            $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+            if (strpos($referer, 'admin.html') !== false) {
+                $admin_mode = true;
+            }
+
+            if ($user_role === 'admin' && $admin_mode) {
                 // Administrador ve TODOS los pedidos con información del cliente
                 $stmt = $pdo->query('
                     SELECT o.*, u.name as customer_name, u.email as customer_email, u.phone as customer_phone 

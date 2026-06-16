@@ -149,6 +149,8 @@ window.TorteriaApp.Controllers.AccountController = (function() {
     }
     window.TorteriaApp.Models.CartModel.clearCart();
     localStorage.removeItem('user');
+    localStorage.removeItem('lte_cart_items');
+    localStorage.removeItem('lte_cart_coupon');
     window.location.href = 'login.html';
   }
 
