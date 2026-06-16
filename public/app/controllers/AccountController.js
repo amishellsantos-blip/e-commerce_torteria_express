@@ -34,6 +34,11 @@ window.TorteriaApp.Controllers.AccountController = (function() {
         document.querySelector(DOM.userNameDisplay).textContent = user.name;
         document.querySelector(DOM.profileNameInput).value = user.name;
         document.querySelector(DOM.profilePhoneInput).value = user.phone || '';
+
+        // Unhide .admin-only elements if user is admin
+        if (user.role === 'admin') {
+          document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'block');
+        }
       } else {
         throw new Error(response.message);
       }

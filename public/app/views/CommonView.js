@@ -25,42 +25,6 @@ window.TorteriaApp.Views.CommonView = (function() {
     init: function() {
       this.updateCartBadge();
       this.bindEvents();
-      this.setupAdminLinks();
-    },
-
-    // Mostrar botón de Panel de Administrador si corresponde
-    setupAdminLinks: function() {
-      const userStr = localStorage.getItem('user');
-      if (userStr) {
-        try {
-          const user = JSON.parse(userStr);
-          if (user.role === 'admin') {
-            const headerActions = document.querySelector('.header-actions');
-            if (headerActions && !document.getElementById('adminPanelBtn')) {
-              // Create a prominent Admin Panel button
-              const adminBtn = document.createElement('a');
-              adminBtn.href = 'admin.html';
-              adminBtn.id = 'adminPanelBtn';
-              adminBtn.className = 'btn btn-dark btn-sm me-3 fw-bold rounded-pill shadow-sm d-flex align-items-center';
-              adminBtn.innerHTML = '<i class="bi bi-shield-lock-fill me-1"></i> Admin Panel';
-              
-              // Insert it at the beginning of header actions (before the cart)
-              headerActions.insertBefore(adminBtn, headerActions.firstChild);
-              
-              // Hide the standard "Mi Cuenta" icon to avoid confusion
-              const accountLinks = document.querySelectorAll('a[href="account.html"]');
-              accountLinks.forEach(link => {
-                if (link.classList.contains('header-action-btn')) {
-                  link.style.display = 'none';
-                } else {
-                  link.href = 'admin.html';
-                  link.textContent = 'Panel de Admin';
-                }
-              });
-            }
-          }
-        } catch (e) {}
-      }
     },
 
     // Formateador global de COP para que las demás vistas lo utilicen
