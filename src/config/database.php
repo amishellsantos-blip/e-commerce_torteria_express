@@ -2,7 +2,7 @@
 // db.php - Archivo encargado de establecer la conexión con la base de datos MySQL
 
 // Credenciales de conexión al servidor de producción
-$host = 'localhost';
+$host = 'host.docker.internal';
 $db   = 'torteria_express';
 $user = 'root';
 $pass = '';
