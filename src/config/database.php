@@ -1,11 +1,11 @@
 <?php
 // db.php - Archivo encargado de establecer la conexión con la base de datos MySQL
 
-// Intentar obtener credenciales del archivo .env (Docker), con fallback a XAMPP local
-$host = getenv('DB_HOST') && getenv('DB_HOST') !== 'tu-servidor.com' ? getenv('DB_HOST') : 'drapps.co'; // Host remoto
-$db   = getenv('DB_NAME') && getenv('DB_NAME') !== 'tu_base_de_datos' ? getenv('DB_NAME') : 'drappsco_torteria_express'; // Ajustado según el nombre del proyecto
-$user = getenv('DB_USER') && getenv('DB_USER') !== 'tu_usuario' ? getenv('DB_USER') : 'drappsco';
-$pass = getenv('DB_PASSWORD') && getenv('DB_PASSWORD') !== 'tu_password' ? getenv('DB_PASSWORD') : 'ProgramacionWeb2026@';
+// Credenciales de conexión al servidor de producción
+$host = 'localhost';
+$db   = 'torteria_express';
+$user = 'root';
+$pass = '';
 $charset = 'utf8mb4';         // Codificación para aceptar tildes, eñes y emojis sin errores
 
 // Construcción de la cadena de conexión (Data Source Name)
