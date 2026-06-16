@@ -25,6 +25,29 @@ window.TorteriaApp.Views.CommonView = (function() {
     init: function() {
       this.updateCartBadge();
       this.bindEvents();
+      this.setupAdminLinks();
+    },
+
+    // Cambiar enlaces de "Mi Cuenta" al Panel de Administrador si corresponde
+    setupAdminLinks: function() {
+      const userStr = localStorage.getItem('user');
+      if (userStr) {
+        try {
+          const user = JSON.parse(userStr);
+          if (user.role === 'admin') {
+            const accountLinks = document.querySelectorAll('a[href="account.html"]');
+            accountLinks.forEach(link => {
+              link.href = 'admin.html';
+              if (link.textContent.trim() === 'Mi Cuenta') {
+                link.textContent = 'Panel de Admin';
+              }
+              if (link.title === 'Mi Cuenta') {
+                link.title = 'Panel de Admin';
+              }
+            });
+          }
+        } catch (e) {}
+      }
     },
 
     // Formateador global de COP para que las demás vistas lo utilicen
