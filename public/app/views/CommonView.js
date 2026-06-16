@@ -25,6 +25,36 @@ window.TorteriaApp.Views.CommonView = (function() {
     init: function() {
       this.updateCartBadge();
       this.bindEvents();
+      this.setupAdminLinks();
+    },
+
+    // Muestra un botón directo al Panel de Administrador en el encabezado
+    setupAdminLinks: function() {
+      const userStr = localStorage.getItem('user');
+      if (userStr) {
+        try {
+          const user = JSON.parse(userStr);
+          if (user.role === 'admin') {
+            const headerActions = document.querySelector('.header-actions');
+            // Evitar duplicados y no agregarlo si ya estamos en admin.html
+            if (headerActions && !document.getElementById('adminPanelBtn') && !window.location.href.includes('admin.html')) {
+              const adminBtn = document.createElement('a');
+              adminBtn.href = 'admin.html';
+              adminBtn.id = 'adminPanelBtn';
+              adminBtn.className = 'btn btn-dark btn-sm me-2 fw-semibold rounded-pill shadow-sm d-none d-md-flex align-items-center';
+              adminBtn.innerHTML = '<i class="bi bi-shield-lock-fill me-1"></i> Panel Admin';
+              
+              // Insertarlo antes del icono de usuario
+              const accountIcon = document.querySelector('a[href="account.html"]');
+              if (accountIcon && accountIcon.parentElement === headerActions) {
+                headerActions.insertBefore(adminBtn, accountIcon);
+              } else {
+                headerActions.prepend(adminBtn);
+              }
+            }
+          }
+        } catch (e) {}
+      }
     },
 
     // Formateador global de COP para que las demás vistas lo utilicen
