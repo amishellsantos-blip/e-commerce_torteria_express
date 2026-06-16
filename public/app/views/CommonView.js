@@ -28,23 +28,36 @@ window.TorteriaApp.Views.CommonView = (function() {
       this.setupAdminLinks();
     },
 
-    // Cambiar enlaces de "Mi Cuenta" al Panel de Administrador si corresponde
+    // Mostrar botón de Panel de Administrador si corresponde
     setupAdminLinks: function() {
       const userStr = localStorage.getItem('user');
       if (userStr) {
         try {
           const user = JSON.parse(userStr);
           if (user.role === 'admin') {
-            const accountLinks = document.querySelectorAll('a[href="account.html"]');
-            accountLinks.forEach(link => {
-              link.href = 'admin.html';
-              if (link.textContent.trim() === 'Mi Cuenta') {
-                link.textContent = 'Panel de Admin';
-              }
-              if (link.title === 'Mi Cuenta') {
-                link.title = 'Panel de Admin';
-              }
-            });
+            const headerActions = document.querySelector('.header-actions');
+            if (headerActions && !document.getElementById('adminPanelBtn')) {
+              // Create a prominent Admin Panel button
+              const adminBtn = document.createElement('a');
+              adminBtn.href = 'admin.html';
+              adminBtn.id = 'adminPanelBtn';
+              adminBtn.className = 'btn btn-dark btn-sm me-3 fw-bold rounded-pill shadow-sm d-flex align-items-center';
+              adminBtn.innerHTML = '<i class="bi bi-shield-lock-fill me-1"></i> Admin Panel';
+              
+              // Insert it at the beginning of header actions (before the cart)
+              headerActions.insertBefore(adminBtn, headerActions.firstChild);
+              
+              // Hide the standard "Mi Cuenta" icon to avoid confusion
+              const accountLinks = document.querySelectorAll('a[href="account.html"]');
+              accountLinks.forEach(link => {
+                if (link.classList.contains('header-action-btn')) {
+                  link.style.display = 'none';
+                } else {
+                  link.href = 'admin.html';
+                  link.textContent = 'Panel de Admin';
+                }
+              });
+            }
           }
         } catch (e) {}
       }
